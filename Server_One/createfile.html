@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>0X - Create File</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+        </noscript>
+
+        <script>
+
+            window.onload = function(){
+            var textFile = null,
+
+            makeTextFile = function (text) {
+                var data = new Blob([text], {type: 'text/plain'});
+
+               // If we are replacing a previously generated file we need to
+               // manually revoke the object URL to avoid memory leaks.
+               if (textFile !== null) {
+                   window.URL.revokeObjectURL(textFile);
+                }
+
+                textFile = window.URL.createObjectURL(data);
+                return textFile;
+            };
+
+            var create = document.getElementById('create'),
+            textbox = document.getElementById('textbox');
+
+            create.addEventListener('click', function () {
+                var link = document.getElementById('downloadlink');
+                link.href = makeTextFile(textbox.value);
+                link.style.display = 'block';
+                }, false);
+            };
+
+        </script>
+
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="#">0X</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="user.html">User</a></li>
+						<li><a href="institutions.html">Institutions</a></li>
+						<li><a href="certifier.html">Certifier</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+						<li><a href="http://localhost:5001/webui" target="_blank">IPFS</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+        <section id="main" class="wrapper style1">
+            <header class="major">
+                <h2>Create Certificate</h2>
+                <p>Create the certificate here and download it to your machine.<br/>Please delete the file after uploading it to IPFS</p>
+            </header>
+            <div class="container">
+                <div class="row">
+                    <div class="8u">
+                        <section>
+                            <h2>Enter Details</h2>
+                            <ul class="actions">
+                                <li>
+<textarea id="textbox">Name &nbsp; : &nbsp; ""  
+School &nbsp; : &nbsp; "" 
+DOB &nbsp;: &nbsp; "" 
+Registration &nbsp; : &nbsp; ""</textarea>
+                                    <br/>
+                                    <button id="create" class="button big alt">Create file &#13;&#10;</button> 
+                                    <a download="certificate.txt" id="downloadlink" style="display: none" class="button big alt">Download</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </Ssection>
+		<!-- Footer -->
+		<footer id="footer">
+				<div class="container">
+					<div class="row double">
+						<div class="6u">
+							<div class="row collapse-at-2">
+								<div class="6u">
+									<h3>TEAM BEHIND 0X</h3>
+									<ul class="alt">
+										<li>DRISYA K</li>
+										<li>AKSHAY P RAJ</li>
+										<li>AKHIL M</li>
+										<li>ABHIRAM R S</li>
+									</ul>
+								</div>
+								<div class="6u">
+									<h3>Inspiration Drawn From</h3>
+									<ul class="alt">
+										<li><a href="www.sora.org">SORA</a></li>
+										<li><a href="www.opensource.org">OSI</a></li>
+										<li><a href="fsf.org">FSF</a></li>
+										<li><a href="hyperledger.org">Hyperledger</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="6u">
+							<h2>Find us</h2>
+							<p>We do not believe in social media campaigns and advertisements</p>
+							<ul class="alt">
+								<li><a href="https://github.com/ar1997">Github</a></li>
+								<li><a href="email@domain.com">email@domain.com</a></li>	
+                                <li>Phone : xxxxxxxxxxxxx</li>
+                                <li><a href="profile@linkdin">Linkedin</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="copyright">
+						<li>&copy; 0X. All rights reserved.</li>
+						<li>Images: <a href="https://simpledesktops.com">SimpleDesktops</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>

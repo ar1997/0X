@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="js/blowfish.js" />
+    <script src="js/blowfish.js"></script>
+    <title>Encrypt</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Encrypt</h1>
+      <div class="line"></div>
+      <p>
+        Standalone Blowfish library from Dojo Toolkit: <a href="http://sladex.org/blowfish.js/ext/blowfish.js">blowfish.js</a>
+      </p>
+      <div class="line"></div>
+      <div class="p">
+        <label class="label" for="data">Data to encrypt or decrypt</label>
+        <textarea class="textarea" id="data"></textarea>
+      </div>
+      <div class="p">
+        <label class="label" for="key">Key</label>
+        <input class="input" id="key" type="text" value="" />
+      </div>
+      <div class="p">
+        <label class="label" for="ciphermode">Cipher mode</label>
+        <select class="select" id="ciphermode">
+          <option value="0" selected="selected">ECB</option>
+          <option value="1">CBC</option>
+          <option value="2">PCBC</option>
+          <option value="3">CFB</option>
+          <option value="4">OFB</option>
+          <option value="5">CTR</option>
+        </select>
+        <span class="sub">Enumeration for various cipher modes.</span>
+      </div>
+      <div class="p">
+        <label class="label" for="outputtype">Output type</label>
+        <select class="select" id="outputtype">
+          <option value="0" selected="selected">Base64</option>
+          <option value="1">Hex</option>
+          <option value="2">String</option>
+          <option value="3">Raw</option>
+        </select>
+        <span class="sub">Enumeration for input and output encodings.</span>
+      </div>
+      
+      <div class="line"></div>
+      <div class="buttons">
+        <button class="button" id="encrypt">Encrypt</button>
+        <button class="button" id="decrypt">Decrypt</button>
+      </div>
+      <div class="line"></div>
+      <div class="p">
+        <label class="label" for="result">Result</label>
+        <textarea class="textarea" id="result"></textarea>
+      </div>
+      <div class="p">
+        <label class="label" for="jscode">JS code</label>
+        <textarea class="textarea" id="jscode"></textarea>
+      </div>
+      <footer class="footer">
+        <div class="line"></div>
+        <small class="about">October 2012 by <a href="http://sladex.org/">sladex.org</a></small>
+      </footer>
+    </div>
+    <script src="ext/script.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-11377983-3']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
