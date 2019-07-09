@@ -1,11 +1,13 @@
 # 0X
-## Notice : This dapp is only a proof of concept, not the whole application.
+## Notice : This dapp contains only the basic functionalities of the proposed system, not the application in its full scale.
+
 **This is it. The decentralized web application written in Vue JS and Solidity. 
 Done using the VueJS box from truffle. Run as a seperate server away from server 1.**
 
 **_Steps to follow, they have to be followed in the exact order_**
 
 >Make sure that you have the following installed inside your container or globally.
+
 - IPFS
 - Truffle
 - Ganache
