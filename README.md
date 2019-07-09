@@ -52,10 +52,10 @@ Now you will be able to see the console. To use our dapp, we need to compile and
 migrate --reset --compile-all
 ```
 
-Now run server 1. After they are both up and running succefully, you can now run the dapp. Using the following command. First cd into the folder app-users and run 
+If the migration was successful, copy the file **~/server2/build/contracts/Users.json** into the folder **~/server2/app-users/src/assets/**. Now run server 1. After they are both up and running succefully, you can now run the dapp. Using the following command. First cd into the folder app-users and run 
 
 ```
 npm run dev
 ```
 
-By default if you have IPFS daemon running on port 8080 let us say that you are using port 8081 for server 1, you should have your dapp running on port 8082.
+By default if you have IPFS daemon running on port 8080 let us say that you are using port 8081 for server 1, you should have your dapp running on port 8082. If you are having difficulties regarding redirection from server one to server two simply change port numbers on the web pages and you will be good to go.
