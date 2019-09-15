@@ -1,6 +1,7 @@
 # 0X
 ## Notice : This dapp contains only the basic functionalities of the proposed system, not the application in its full scale.
-## This app lets you create a certificate, and you can upload the certificate to IPFS, get the hash of the file, then publish the hash on Ethereum. It is somewhat foolish to do this way but just as a proof of concept, I am designing it like this. There is a main server that runs seperately which simply hosts a bunch of static pages, then it redirects the users based on their tier to respective destinations on the DAPP. So a second server is running that is written in VueJS, (made from some code I used from https://github.com/danielefavi) as I did not have enough time to make it from scratch. Most of the code is as it was.
+
+>This app lets you create a certificate, and you can upload the certificate to IPFS, get the hash of the file, then publish the hash on Ethereum. It is somewhat foolish to do this way but just as a proof of concept, I am designing it like this. There is a main server that runs seperately which simply hosts a bunch of static pages, then it redirects the users based on their tier to respective destinations on the DAPP. So a second server is running that has a front end written in VueJS, ( Made from some code that was used in https://github.com/danielefavi 's tutorial ) as I did not have enough time to make it from scratch. Parts of the code remains unchanged.
 
 **This is it. The decentralized web application written in Vue JS and Solidity. 
 Done using the VueJS box from truffle. Run as a seperate server away from server 1.**
