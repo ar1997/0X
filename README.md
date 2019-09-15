@@ -20,13 +20,15 @@ Truffle is the framework, the suit that has all tools that we actually need to d
 
 - Ganache
 
-Ganache will give you needed Ethereum nodes where you can put the smart contract you write. It runs locally on the machine itself. By default it gives you ten accounts to play with. It is strictly for development purposes.
+>Ganache will give you needed Ethereum nodes where you can put the smart contract you write. It runs locally on the machine itself. By default it gives you ten accounts to play with. It is strictly for development purposes.
 
 - IPFS Companion (Add-on for both Firefox and Chrome; To redirect requests from the browser to the IPFS node)
 
+>If you have a daemon running locally, IPFS companion can make things simpler and faster for you.
+
 - Metamask (Add-on Firefox/Chrome)
 
-Metamask can manage your Ethereum wallet. Show you details about the network, transactions and authorize transactions. It will help you manage your Ethereum wallet.
+>Metamask can manage your Ethereum wallet. Show you details about the network, transactions and authorize transactions. It will help you manage your Ethereum wallet.
 
 ```
 git clone https://github.com/ar1997/0X
@@ -36,7 +38,7 @@ And WAIT. **IT TAKES TIME**
 
 After installation make sure that you have ganache running locally, then go to MetaMask, set up the account. Make sure that it detects and connects to the Ganache network running locally on your machine. Import a few accounts for testing.
 
->If you want to, you can configure ganache to be detectable ovehttps://ipfs.io/r the network and access the application from other devices.
+>If you want to, you can configure ganache to be detectable over https://ipfs.io/ the network and access the application from other devices.
 
 Now host the main static pages on a simple web server. You can use any server that you want or one that you built yourself. If it is up and running, You can now run the IPFS daemon. You can do that by simply running 
 
